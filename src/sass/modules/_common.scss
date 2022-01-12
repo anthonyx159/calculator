@@ -4,7 +4,15 @@ MEDIA SCSS - Importa todos los componentes necesarios definidos en package.json
 @import "~sweetalert2/src/sweetalert2";
 
 body {
-  color: #fff;
-  background: #000 url("../../../src/images/movistar.png") center center no-repeat;
-  text-align: center;
+    background: #C5E4E7;
+}
+
+/* Css for removing the scroll buttons in number input */
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
 }

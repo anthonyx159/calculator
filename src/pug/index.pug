@@ -1,9 +1,46 @@
-head
-    title="Index"
-    meta(name='description', content='Index description')
-    meta(name='og:title', content="Index")
-    link(rel='shortcut icon', href='/images/static/favicon.ico', type='image/x-icon')
-    link(rel='stylesheet', href='/css/index.css')
-body
-    h1#main Hola Mundo!
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet', href='/css/index.css')
+        title Calculadora
+    body
+        .main-title SPLI#[br]TTER
+        .calculator
+            .calculator__container
+                form.calculator__content
+                    .calculator__col-one
+                        .calculator__bill 
+                            .calculator__box
+                                span.calculator__bill-title.grayDark Bill
+                                p#bill-text-error.calculator__error-inactive Can't be zero 
+                            img(src="/images/static/icon-dollar.svg" alt="Image Dolar")
+                            input#bill-input.calculator__bill-amount(type="number" name="bill" min="1" placeholder="0")
+                        .calculator__tip
+                            .calculator__tip-title.grayDark Select tip %
+                            .calculator__tip-amount-box
+                                .calculator__tip-amount.fixed 5%
+                                .calculator__tip-amount.fixed 10%
+                                .calculator__tip-amount.fixed 15%
+                                .calculator__tip-amount.fixed 25%
+                                .calculator__tip-amount.fixed 35%
+                                input#custom-tip.calculator__tip-amount.custom(type="text" name="text" placeholder="Custom")
+                        .calculator__people
+                            .calculator__box
+                                span.calculator__people-title.grayDark Number of people
+                                p#people-text-error.calculator__error-inactive Can't be zero
+                            img(src="/images/static/icon-person.svg" alt="Image user")
+                            input#people-input.calculator__people-amount(type="number" name="number" min="1" placeholder="0")
+                    .calculator__col-two
+                        .calculator__checkout
+                            .calculator__total-tip Tip amount #[br] #[span / person]
+                            #calc-tip.calculator__total-tip-price $0.00
+                            .calculator__total-tip Total #[br] #[span / person]
+                            #calc-total.calculator__total-tip-price $0.00
+                        .calculator__reset
+                            a(href="javascript:void(0)")#reset-all.button RESET
+
+
     script(src="/js/index.js")

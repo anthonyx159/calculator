@@ -1,5 +1,13 @@
 /**
 MAIN SCSS
  */
+@import "./global/var";
+@import "./global/reset";
+
+@import "./component/calculator";
+@import "./component/button";
+
+@import './pages/index';
+
 @import "./modules/common";
 @import "./modules/typography";
